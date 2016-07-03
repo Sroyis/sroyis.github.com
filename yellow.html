@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#boy {
+				height: 212px;
+				width: 130px;
+				border: 5px solid #000;
+				border-radius: 65px;
+				position: relative;
+				left: 200px;
+				top: 100px;
+				overflow: hidden;
+				z-index: 10;
+			}
+			/*眼睛*/
+			
+			#eye_bl {
+				width: 40px;
+				height: 40px;
+				border: 3px solid #000;
+				background: #fff;
+				border-radius: 50%;
+				position: absolute;
+				top: 37px;
+				left: 20px;
+			}
+			
+			#eye_br {
+				width: 40px;
+				height: 40px;
+				border: 3px solid #000;
+				background: #fff;
+				border-radius: 50%;
+				position: absolute;
+				top: 37px;
+				left: 65px;
+			}
+			
+			#eye_w {
+				width: 20px;
+				height: 20px;
+				background: #000;
+				border: 1px solid #000;
+				border-radius: 50%;
+				margin: 10px 20px;
+				animation: eye 3s infinite;
+			}
+			/*animation: eye 5s;*/
+			@keyframes eye{
+				0%{
+					margin-left: 20px;
+				}
+				30%{
+					margin-left: 10px;
+				}
+				50%{
+					margin-left: 0px;
+				}
+				75%{
+					margin-left: 10px;
+				}
+				100%{
+					margin-left: 20px;
+				}
+			}
+			#eye_wn {
+				width: 10px;
+				height: 10px;
+				background: #fff;
+				border-radius: 50%;
+				margin-top: 5px;
+				margin-left: 7px;
+				animation: eyewn 3s infinite;
+			}
+			
+			@keyframes eyewn{
+				0%{
+					margin-left: 7px;
+				}
+				30%{
+					margin-left: 3px;
+				}
+				50%{
+					margin-left: 0px;
+				}
+				75%{
+					margin-left: 3px;
+				}
+				100%{
+					margin-left: 7px;
+				}
+			}
+			
+			
+			/*眼镜*/
+			
+			#glasses_l {
+				width: 22px;
+				height: 10px;
+				position: absolute;
+				left: -1px;
+				top: 55px;
+				transform: rotate(5deg);
+			}
+			
+			#glasses_r {
+				width: 22px;
+				height: 10px;
+				position: absolute;
+				right: -1px;
+				top: 55px;
+				transform: rotate(-5deg);
+			}
+			/*裤子*/
+			
+			#pants {
+				width: 140px;
+				height: 60px;
+				background: #2074A0;
+				border-top: 3px solid #000;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+			/*背带*/
+			
+			#pocket {
+				width: 70px;
+				height: 30px;
+				background: #2074A0;
+				border-top: 3px solid #000;
+				border-left: 3px solid #000;
+				border-right: 3px solid #000;
+				border-top-left-radius: 10px;
+				border-top-right-radius: 10px;
+				position: absolute;
+				top: 119px;
+				left: 27px;
+				z-index: 2;
+			}
+			
+			#pocket_tl {
+				width: 50px;
+				height: 11px;
+				background: #2074A0;
+				border: 3px solid #000;
+				position: absolute;
+				left: -10px;
+				top: 112px;
+				z-index: 3;
+				transform: rotate(28deg);
+			}
+			
+			#pocket_tr {
+				width: 50px;
+				height: 11px;
+				background: #2074A0;
+				border: 3px solid #000;
+				position: absolute;
+				right: -10px;
+				top: 112px;
+				z-index: 3;
+				transform: rotate(-28deg);
+			}
+			
+			#pocket_tl:after {
+				content: '●';
+				font-size: 8px;
+				position: absolute;
+				top: -1px;
+				right: 0;
+			}
+			
+			#pocket_tr:after {
+				content: '●';
+				font-size: 8px;
+				position: absolute;
+				top: -1px;
+				left: 0;
+			}
+			
+			#pocket_n {
+				width: 36px;
+				height: 22px;
+				background: #2074A0;
+				border: 3px solid #000;
+				margin: 26px auto 0;
+				border-bottom-left-radius: 15px;
+				border-bottom-right-radius: 15px;
+			}
+			/*嘴*/
+			#mouth {
+				width: 20px;
+				height: 20px;
+				background: #FFF;
+				border: 3px solid #000;
+				border-radius: 10px;
+				transform: rotate(45deg);
+				position: absolute;
+				top: 88px;
+				left: 53px;
+			}
+			#mouth:after{
+				content: '';
+				display: block;
+				width: 26px;
+				height: 12px;
+				border-bottom: 3px solid #000;
+				transform: rotate(-45deg);
+				position: absolute;
+				top: -5px;
+				left: -10px;
+				background: #F9D946;
+			}
+			/*胳膊*/
+			.arm {
+				width: 25px;
+				height: 25px;
+				background: #F9D946;
+				border: 3px solid #000;
+				border-radius: 30%;
+				position: absolute;
+			}
+			
+			#arm_l {
+				left: 322px;
+				top: 223px;
+				transform: rotate(-45deg);
+			}
+			
+			#arm_r {
+				left: 188px;
+				top: 223px;
+				transform: rotate(-45deg);
+			}
+			
+			#lf_l {
+				width: 54px;
+				height: 50px;
+				position: absolute;
+				top: 305px;
+				left: 218px;
+				/*transform: rotate(10deg);*/
+				transform-origin: 54px 0;
+				-webkit-animation: fool 1s infinite;
+			}			
+			@keyframes fool {
+				 0%,50%,100%{
+				 	-webkit-transform: rotate(0deg);
+				 }
+				 80%{
+				 	-webkit-transform: rotate(10deg);
+				}
+			}
+			#lf_r {
+				width: 54px;
+				height: 50px;
+				position: absolute;
+				top: 305px;
+				left: 270px;
+				/*transform: rotate(-10deg);*/
+				transform-origin: 0 0;
+				-webkit-animation: foor 1s infinite;
+			}
+			@keyframes foor {
+				0%,50%,100%{
+					-webkit-transform: rotate(0deg);
+				}
+				30%{
+				 -webkit-transform: rotate(-10deg);
+				 }		 
+			}
+			/*腿*/
+			
+			.leg {
+				width: 30px;
+				height: 50px;
+				background: #000;
+				position: absolute;
+			}
+			
+			#leg_l {
+				border-bottom-right-radius: 5px;
+				right: 4px;
+				top: 0px;
+			}
+			
+			#leg_r {
+				border-bottom-left-radius: 5px;
+				left: 4px;
+				top: 0px;
+			}
+			/*脚*/
+			
+			.foot {
+				width: 50px;
+				height: 30px;
+				background: #000;
+				border-radius: 20px;
+				position: absolute;
+			}
+			
+			#foot_l {
+				left: 4px;
+				bottom: 0;
+			}
+			
+			#foot_r {
+				left: 0px;
+				bottom: 0;
+			}
+			
+			.bl {
+				background: #000;
+			}
+			
+			.yel {
+				background: #F9D946;
+			}
+		
+			
+			
+		</style>
+	</head>
+
+	<body>
+		<section style='position: relative'>
+			<div id="boy" class="yel">
+				<!--眼镜-->
+				<div id="glasses_l" class="bl"></div>
+				<!--眼-->
+				<div id="eye_bl" class="bl">
+					<div id="eye_w">
+						<div id="eye_wn"></div>
+					</div>
+				</div>
+				<!--眼镜-->
+				<div id="glasses_r" class="bl"></div>
+				<!--眼-->
+				<div id="eye_br" class="bl">
+					<div id="eye_w">
+						<div id="eye_wn"></div>
+					</div>
+				</div>
+				<!--嘴-->
+				<div id="mouth"></div>
+				<!--背带-->
+				<div id="pocket_tl"></div>
+				<div id="pocket_tr"></div>
+
+				<!--兜-->
+				<div id="pocket">
+					<div id="pocket_n"></div>
+				</div>
+
+				<!--裤-->
+				<div id="pants"></div>
+
+			</div>
+			<!--胳膊-->
+			<div id="arm_l" class="arm"></div>
+			<div id="arm_r" class="arm"></div>
+			<div id="lf_l">
+				<!--腿-->
+				<div id="leg_l" class="leg"></div>
+				<!--脚-->
+				<div id="foot_r" class="foot"></div>
+			</div>
+			<div id="lf_r">
+				<!--腿-->
+				<div id="leg_r" class="leg"></div>
+				<!--脚-->
+				<div id="foot_l" class="foot"></div>
+			</div>
+		</section>
+		
+		
+		<audio src="mu.mp3" autoplay="autoplay" loop="loop">
+			<source src="mu.mp3" type="audio/mp3">
+			您的浏览器不支持 audio 标签。
+		</audio>
+	</body>
+
+</html>
