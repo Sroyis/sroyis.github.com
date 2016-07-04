@@ -1,0 +1,427 @@
+/*头部*/
+#header{
+	height: 49px;
+	width: 1344px;
+	background-color:#252525;
+	border-bottom:1px solid #393939 ;
+	box-shadow:0 0 5px #333;
+}
+#logo{
+	width: 112px;
+	padding-top: 38px;
+	height: 0;
+	background-position: 0px 0px;
+	margin-left: 10px;
+	margin-right: 26px;
+	position: relative;
+}
+#logo a{
+	width: 112px;
+	height: 30px;
+	position: absolute;
+	top:10px;
+	left: 0;
+}
+/*菜单*/
+#top_nav_left{}
+#top_nav_left a{
+	display: inline-block;
+	width: 90px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 18px;
+	color: #d8d8d8;
+	font-family: "微软雅黑";
+}
+#top_nav_left .act{
+	color: #fff;
+	font-weight:bold ;
+	background-color: #0f0f0f;
+}
+/*网盘*/
+#top_nav_left {
+	position: relative;
+}
+#top_nav_left s{
+	width: 11px;
+	height: 6px;
+	background-position: -90px -54px;
+	margin-top: 22px;
+	margin-right: 10px;
+}
+#top_nav_right a{
+	font-size: 12px;
+	color: #d8d8d8;
+	line-height: 50px;
+	font-family: "微软雅黑";
+}
+#top_nav_right s{
+	display: block;
+	height: 15px;
+	width: 1px;
+	margin: 16px 12px 0 10px;
+	background: #393939;
+}
+/*网盘菜单hover时所显示的盒子*/
+#pan_nav{
+	display: block;
+	width: 100px;
+	height: 40px;
+	background: red;
+	position: absolute;
+	left: 90px;
+	display: none;
+}
+/*菜单和内容区*/
+#conten{
+	width: 1344px;
+	height: 580px;
+}
+/*菜单*/
+#con_left{
+	background: #f0f0f0;
+	width: 209px;
+	font-size: 14px;
+	border-right: 1px solid #c6c8cc;
+	height: 580px;
+}
+#file_nav{
+	padding: 14px 0 10px 0px;
+	border-bottom: 1px solid #dce1e6;
+}
+#file_nav li{
+	height: 31px;
+	margin-bottom: 5px;
+	line-height: 30px;
+	text-indent:32px;
+	width: 100%;
+}
+#file_nav li a,#share a,#recycle_bin a{
+	color: #333;
+}
+#share{
+	border-bottom: 1px solid #dce1e6;
+}
+#share,#recycle_bin{
+	height: 41px;
+	line-height: 40px;
+	text-indent:32px;
+	width: 100%;
+}
+/*内容区域*/
+#con_right{
+	width: 1134px;
+	height: 100%;
+	position: relative;
+}
+/*按钮*/
+#function_key{
+	height: 39px;
+	padding: 11px 18px 0 25px;
+	/*width: 100%;*/
+	background: #f7f7f7;
+	border-bottom: 1px solid #c6c8cc;
+}
+/*按钮样式，上传，新建文件夹*/
+#up,#newfile{/*上传*/
+	border-radius: 5px;
+	padding: 5px 22px 4px 15px;
+	margin-right: 9px;
+}
+#up{	
+	width: 94px;
+	height: 28px;
+	box-sizing:border-box;
+	/*overflow: hidden;*/
+	position: relative;
+	background: #2a84e9;
+	border: 1px solid #1c6bbb;	
+}
+#up s{
+	background-position:0px -4px ;
+}
+#newfile s{
+	background-position:-146px -4px ;
+}
+#up input{
+	width: 98px;
+	height: 26px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+}
+.backicon{
+	background-image: url(../img/sys-icon_9b5f22d.png);
+	background-repeat: no-repeat;
+	
+}
+#up span{
+	display: none;
+	background: blanchedalmond;
+	border: 1px solid red;
+	padding: 0 5px;
+	border-radius:2px ;
+	width: 160px;
+	height: 20px;
+	line-height: 20px;
+	position: absolute;
+	bottom: -24px;
+	left: 0;
+}
+#newfile{/*新建文件，离线下载*/
+	height: 28px;
+	box-sizing:border-box;
+	background: #fdfdfd;
+	border: 1px solid #a7a7a7;
+}
+#up a,#newfile a{
+	font-size: 12px;
+	line-height: 16px;
+}
+#up a{
+	color: white;
+}
+#newfile a{
+	color: #666;
+}
+#list_swich a{/*图标还是列表*/
+	display: block;
+	height: 25px;
+	width: 30px;
+	color: #979898;
+	border: 1px solid #a8a8a8;	
+}
+#list_swich a:nth-last-of-type(1){
+	margin-left: -1px;
+	/*background: red;*/
+}
+.act{
+	background-color: #cacaca;
+}
+/*要做雪碧图*/
+#function_key s{
+	display: block;
+	width: 26px;
+	height: 20px;
+	margin-right: 5px;
+}
+/*全部文件,文件加载数量*/
+#files_nav{
+	color: #393939;
+	height: 30px;
+	padding-right: 20px;
+	text-indent: 20px;
+	line-height: 30px;
+}
+
+#files_nav span{
+	color: #666;
+}
+.files_nav{
+	padding-left: 20px;
+	
+}
+.nav_level{
+	color: #393939;
+}
+/*文件名*/
+#list_header{
+	height: 41px;
+	line-height: 40px;
+	width: 100%;
+	color: #888;
+	border-top: 1px solid #d2d2d2;
+	border-left: 1px solid #d2d2d2;
+	border-bottom: 1px solid #d2d2d2;
+	margin-left: 10px;
+}
+#list_header span:nth-of-type(1){
+	margin-right: 5px;
+}
+#allchk{
+	margin: 14px 11px 0;
+}
+#F2,#delete{
+	background: #fff;
+	margin: 12px 5px 0;
+	border: 1px solid #CACACA;
+}
+.info{
+	display: none;
+	
+}
+/*文件存放区*/
+#list_con{
+	height: 450px;
+	width: 100%;
+	padding-left: 10px;
+	background: white;
+	overflow: auto;
+	position: relative;
+}
+
+
+/*详细信息*/
+.details .filebox{
+	height: 40px;
+	content: '';
+	display: block;
+	clear: both;
+    border-bottom: 1px solid #ebebeb;
+}
+.details .fileimg{
+    height: 38px;
+    width: 50px;
+    padding-left: 12px;
+    border: 2px solid #fff;
+    background: url(../img/sm_file.png) no-repeat 32px 5px;
+    margin-right: 10px;
+    float: left;
+}
+.details span{
+	float: left;
+	margin-right: 10px;
+	line-height: 30px;
+}
+.details .fileimg input{
+	display: none;
+	vertical-align: top;
+	float: left;
+	margin-top: 9px;
+}
+.details .edtor{
+	display: none;
+	width: 260px;
+	height: 40px;
+}
+.details strong{
+	line-height: 40px;
+}
+.details .edtor input[type="text"]{ 
+	width: 82px;
+    height: 22px;
+    border: 2px solid #8eb0e7;
+    padding-left: 3px;
+}
+.details .edtor input[type="button"]{
+	width: 22px;
+    height: 22px;
+    margin: 2px 3px 0 4px;
+}
+/*.details input{
+	width:150px;
+	height: 18px;
+}*/
+/*图标*/
+.icon .fileimg{
+	width: 90px;
+    height: 92px;
+    margin: 0 auto;
+    background: url(../img/icon.png) no-repeat 16px -77px;
+    /* border: 2px solid #2e80dc; */
+    border: 2px solid #fff;
+    position: relative;
+}
+.icon .fileimg input{
+	width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+.icon .edtor{
+	display: none;
+	text-align: left;
+    margin: 2px -4px 0 0;
+}
+.icon .edtor input[type="text"]{ 
+	width: 82px;
+    height: 22px;
+    border: 2px solid #8eb0e7;
+    padding-left: 3px;
+}
+.icon .edtor input[type="button"]{
+	width: 22px;
+    height: 22px;
+    margin: 2px 3px 0 4px;
+}
+.icon .filebox{
+	text-align: center;
+	margin-right: 3px;
+	float: left;
+}
+/*
+.icon .list_view{
+	width: 142px;
+    height: 122px;
+    float: left;
+    margin: 4px 4px 0 0;
+    text-align: center;
+    position: relative
+}
+.icon .intname{
+    width: 110px;
+    height: 16px;
+}
+.icon .chek{
+	position: absolute;
+	top: 2px;
+    left: 26px;
+	z-index: 2;
+}
+.yes{
+	display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 10px 5px 0 5px;
+    background: orange;
+    vertical-align: top;
+}
+.icon .file_icon{
+	position: relative;
+    margin: 0 auto;
+    width: 90px;
+    height: 92px;
+    border: 2px solid #FFF;
+    background-color: red;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}*/
+/*右键菜单*/
+#contextmenu{
+	position: fixed;
+	width: 200px;
+	border: 1px solid #666666;
+	display: none;
+}
+#contextmenu li{
+	text-indent: 8px;
+	background: white;
+	height: 24px;
+	line-height: 24px;
+	/*border-bottom: 1px solid #ccc;*/
+}
+#contextmenu li:hover{
+	background: #E3E3E3;
+}
+
+
+
+.dragbox{
+	position : fixed;
+	border : 1px solid #999;
+	background : #CCCCCC;
+	opacity : .3;
+}
+
+
+
+
+
+
+
+
+
+

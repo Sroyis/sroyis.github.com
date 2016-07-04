@@ -1,0 +1,23 @@
+/*菜单和内容区的hover效果*/
+#file_nav li:hover{
+	background:#e3e3e3;
+	font-weight: bold;
+}
+#share:hover{
+	font-weight: bold;
+	background:#e3e3e3;
+}
+#recycle_bin:hover{
+	background:#e3e3e3;
+	font-weight: bold;
+}
+#newfile:hover s{
+	background-position:-176px -4px ;
+}
+/*.filebox:hover .checkInput{
+	display: block;
+}*/
+/*要转用Js做*/
+#up:hover	span{
+	display: block;
+}
