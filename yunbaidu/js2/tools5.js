@@ -1,6 +1,6 @@
-var tools = (function(){
-	
-	var toolsObj = {
+
+
+var tools = {
 		$:function(selector,context){
 			/*			 
 			 * #id
@@ -20,21 +20,8 @@ var tools = (function(){
 				return context.getElementsByTagName(selector);
 			}
 		},
-		addEvent:function(ele,eventName,eventFn){
-			ele.addEventListener(eventName,eventFn,false);
-		},
-		removeEvent:function(ele,eventName,eventFn){
-			ele.removeEventListener(eventName,eventFn,false);
-		},
-		containClass:function(ele,classNames){
-			var classNameArr = ele.className.split(" ");
-			for( var i = 0; i < classNameArr.length; i++ ){
-				if( classNameArr[i] === classNames ){
-					return true;
-				}
-			}
-			
-			return false;
+		getEleRect:function(obj){
+			return obj.getBoundingClientRect();
 		},
 		parents:function(obj,selector){
 			/*
@@ -61,14 +48,22 @@ var tools = (function(){
 			
 			return obj;
 		},
-		each:function(obj,callBack){
-			for( var i = 0; i < obj.length; i++ ){
-				callBack(obj[i],i);
+		addEvent:function(ele,eventName,eventFn){
+			ele.addEventListener(eventName,eventFn,false);
+		},
+		removeEvent:function(ele,eventName,eventFn){
+			ele.removeEventListener(eventName,eventFn,false);
+		},
+		//数据  local storage
+		store: function(namespace, data) {
+			if (data) {
+				return localStorage.setItem(namespace, JSON.stringify(data));
 			}
+			var store = localStorage.getItem(namespace);
+			return (store && JSON.parse(store)) || [];
 		},
-		getEleRect:function(obj){
-			return obj.getBoundingClientRect();
-		},
+		
+		//碰撞检测 
 		collisionRect:function(obj1,obj2){
 			var obj1Rect = tools.getEleRect(obj1);
 			var obj2Rect = tools.getEleRect(obj2);
@@ -89,44 +84,31 @@ var tools = (function(){
 				false;
 			}
 		},
-		collision:function(obj1,obj2){
-			var obj1W = obj1.offsetWidth;
-			var obj1H = obj1.offsetHeight;
-			var obj1L = obj1.offsetLeft;
-			var obj1T = obj1.offsetTop;
-
-			var obj2W = obj2.offsetWidth;
-			var obj2H = obj2.offsetHeight;
-			var obj2L = obj2.offsetLeft;
-			var obj2T = obj2.offsetTop;
-			//碰上返回true 否则返回false
-			if( obj1W+obj1L>obj2L && obj1T+obj1H > obj2T && obj1L < obj2L+obj2W && obj1T<obj2T+obj2H ){
-				return true
-			}else{
-				false;
+		//循环
+		each: function(obj, fn) {
+			for (var i = 0; i < obj.length; i++) {
+				fn(obj[i], i);
 			}
 		},
-		store:function (namespace, data)  {
+		//查找是否含有某个类名
+		seek: function(obj, classN) {
+			var classArr = obj.className.split(' ');
+			for (var i = 0; i < classArr.length; i++) {
+				if (classArr[i] == classN) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+		},
+		
+		
+		store: function(namespace, data) {
 			if (data) {
 				return localStorage.setItem(namespace, JSON.stringify(data));
 			}
-
 			var store = localStorage.getItem(namespace);
 			return (store && JSON.parse(store)) || [];
-		},
-		extend:function (obj,bl){
-			var newArr = obj.constructor === Array ? [] : {};
-			for( var attr in obj ){
-				if( typeof obj[attr] === "object" && bl){
-					newArr[attr] = extend(obj[attr]);
-				}else{
-					newArr[attr] = obj[attr];
-				}	
-			}
-			return newArr;
 		}
 	}
-	
-	return toolsObj;
-	
-}())
+
