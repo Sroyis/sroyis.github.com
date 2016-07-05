@@ -43,9 +43,13 @@
 	var list_con = document.getElementById("list_con");
 
 	list_swicha[0].onclick = function() {
+		this.className='act fl';
+		list_swicha[1].className='fl';
 		list_con.className = 'details';
 	}
 	list_swicha[1].onclick = function() {
+		this.className='act fl';
+		list_swicha[0].className='fl';
 		list_con.className = 'icon';
 	}
 
@@ -180,7 +184,7 @@
 		tools.each(checkInput,function (item){
 			if( item.checked ){
 				arr.push(tools.parents(item,"LI"));
-			}		
+			}
 		});
 		return arr;
 	};
@@ -379,7 +383,8 @@
 				当在down的时候，判断事件源 是否是li
 				或者是事件源最近的祖先节点是否是li
 				是li并且li为选中状态  不出现选择框
-		*/		var target = ev.target;
+		*/		
+		var target = ev.target;
 		//事件源目标找到为li
 		if( target = tools.parents(target,"LI") ){
 			
@@ -470,6 +475,10 @@
 		}
 
 	});
+	tools.addEvent(list_con,'contextmenu',function(ev){
+		var e=ev||event;
+		e.preventDefault();
+	})
 	//点击单独的input
 	/*
 		选中
@@ -522,7 +531,7 @@
 			fileimg.style.borderColor = "#fff";
 			checkInput.style.display = "none";
 			checkInput.checked = false;
-			chkNum = whoSelect().length
+			chkNum = whoSelect().length;
 			chkfilenum.innerHTML = '已选中'+chkNum+'个文件';
 			allchk.checked = false;
 		}
