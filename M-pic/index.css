@@ -1,0 +1,127 @@
+@-webkit-keyframes icon {
+	0% {
+		-webkit-transform: translateY(0);
+		opacity: 1;
+	}
+	50% {
+		-webkit-transform: translateY(1rem);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateY(1rem);
+		opacity: 0;
+	}
+}
+
+@keyframes icon {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	50% {
+		transform: translateY(1rem);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(1rem);
+		opacity: 0;
+	}
+}
+
+html,
+body {
+	position: relative;
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+	/*font-size: 20px;*/
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.page,
+.listPage {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover !important;
+}
+
+section.page:nth-of-type(1) {
+	background: url(img/page.jpg) no-repeat;
+}
+
+section.page:nth-of-type(2) {
+	background: url(img/page2.jpg) no-repeat;
+}
+
+section.page:nth-of-type(3) {}
+
+section.page:nth-of-type(4) {
+	background: url(img/page4.jpg) no-repeat;
+}
+
+.ico {
+	position: absolute;
+	left: 6.3125rem;
+	bottom: 1rem;
+	width: 3.375rem;
+	height: 3.025rem;
+	background: url(img/next.png) no-repeat;
+	background-size: cover;
+	animation: icon 2s infinite linear;
+}
+
+section.page {
+	-webkit-transform: translateY(-100%) rotate(-360deg) scale(.1) translateZ(0px);
+	transform: translateY(-100%) rotate(-360deg) scale(.1) translateZ(0px);
+}
+
+section.pageActive {
+	-webkit-transform: translateY(0) rotate(0deg) scale(1) translateZ(0px);
+	transform: translateY(0) rotate(0deg) scale(1) translateZ(0px);
+}
+
+section.pageNext {
+	-webkit-transform: translateY(100%) rotate(360deg) scale(.1) translateZ(0px);
+	transform: translateY(100%) rotate(360deg) scale(.1) translateZ(0px);
+}
+
+li.listPage:nth-of-type(1) {
+	background: url(img/page3.jpg) no-repeat;
+}
+
+li.listPage:nth-of-type(2) {
+	background: url(img/page3_2.jpg) no-repeat;
+}
+
+li.listPage:nth-of-type(3) {
+	background: url(img/page3_3.jpg) no-repeat;
+}
+
+li.listPage:nth-of-type(4) {
+	background: url(img/page3_4.jpg) no-repeat;
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+}
+
+li.listPage {
+	-webkit-transform: translateX(-100%) scale(.5);
+	transform: translateX(-100%) scale(.5);
+}
+
+li.listPageActive {
+	-webkit-transform: translateX(0) scale(1);
+	transform: translateX(0) scale(1);
+}
+
+li.listPageNext {
+	-webkit-transform: translateX(100%) scale(.5);
+	transform: translateX(100%) scale(.5);
+}

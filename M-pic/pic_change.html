@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<title>无标题文档</title>
+		<script>
+			var html = document.querySelector("html");
+			var width = html.getBoundingClientRect().width;
+			html.style.fontSize = width / 16 + "px";
+		</script>
+		<link rel="stylesheet" type="text/css" href="index.css" />
+
+	</head>
+
+	<body>
+		<script>
+			document.body.style.height = document.documentElement.clientHeight + "px";
+		</script>
+		<section class="page" id="page1">
+			<span class="ico"></span>
+		</section>
+		<section class="page" id="page2">
+			<span class="ico"></span>
+		</section>
+		<section class="page" id="page3">
+			<ul class="listPage">
+				<li class="listPage"></li>
+				<li class="listPage"></li>
+				<li class="listPage"></li>
+				<li class="listPage"></li>
+			</ul>
+			<span class="ico"></span>
+		</section>
+		<section class="page" id="page4">
+			<span class="ico"></span>
+		</section>
+		<script src="m.touch.js"></script>
+		<script type="text/javascript" src="index.js"></script>
+	</body>
+
+</html>
