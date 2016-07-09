@@ -1,0 +1,10 @@
+header{
+	height: 20px;
+	width: 100%;
+	background: rgba(255, 192, 203,.4);
+}
+footer{
+	height: 20px;
+	width: 100%;
+	background: pink;
+}
