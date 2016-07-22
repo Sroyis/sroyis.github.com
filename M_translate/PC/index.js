@@ -35,7 +35,7 @@ $(document).ready(function () {
 })
 setTimeout(function(){
 	changMove();
-},800)
+},1000)
 setInterval(function(){
 	changMove()
 },2500)
