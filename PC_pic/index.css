@@ -1,0 +1,52 @@
+#wrap {
+	width: 1000px;
+	height: 500px;
+	position: relative;
+	margin: 100px auto;
+	transform-style: preserve-3d;
+	perspective: 800px;
+}
+
+#wrap div {
+	width: 400px;
+	height: 300px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -200px;
+	margin-top: -150px;
+	transform: translateX(0px) translateY(0px) rotateX(0deg) rotateY(0deg) scale(1);
+	opacity: 1;
+	transition: 1s;
+	-webkit-box-reflect: below 1px -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+	color: white;
+}
+
+#wrap div:nth-of-type(1) {
+	background: url(../img/aaa.jpg) no-repeat;
+	background-size: 100%;
+}
+
+#wrap div:nth-of-type(2) {
+	background: url(../img/ccc.jpg) no-repeat;
+	background-size: 100%;
+}
+
+#wrap div:nth-of-type(3) {
+	background: url(../img/timg2.jpg) no-repeat;
+	background-size: 100%;
+}
+
+#wrap div:nth-of-type(4) {
+	background: url(../img/trim.jpg) no-repeat;
+	background-size: 100%;
+}
+
+#wrap div:nth-of-type(5) {
+	background: url(../img/bb.jpg) no-repeat;
+	background-size: 100%;
+}
+
+.aside {
+	transform: translateX(-200px);
+}

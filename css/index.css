@@ -1,10 +1,99 @@
-header{
-	height: 20px;
-	width: 100%;
-	background: rgba(255, 192, 203,.4);
+/*reset*/
+
+body {
+	margin: 0;
 }
-footer{
-	height: 20px;
+
+h1,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+/*public*/
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.clearfix:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+
+/*index*/
+
+.personInfo {
+	height: 150px;
 	width: 100%;
-	background: pink;
+	background: url(../img/bt-2.png) no-repeat;
+	background-size: 100%;
+	position: fixed;
+	top: 0;
+}
+
+#picbox {
+	width: 100px;
+	height: 100px;
+	background: url(../img/P-2.jpg) no-repeat -9px -13px;
+	background-size: 124%;
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	top: 30px;
+	left: 50px;
+	z-index: 10;
+}
+
+.ring {
+	width: 110px;
+	height: 110px;
+	border: 2px solid #fff;
+	background: rgba(207, 55, 76, 1);
+	border-radius: 50%;
+	position: absolute;
+	top: 23px;
+	left: 43px;
+	z-index: 0;
+}
+
+#name {
+	margin: 30px 50px 10px 0px;
+	font: normal normal 30px/50px "微软雅黑";
+	color: #CF374C;
+}
+
+.information {
+	height: 100%;
+	width: 230px;
+	position: absolute;
+	top: 0;
+	left: 200px;
+}
+
+.information p {
+	font: normal normal 16px/24px "微软雅黑";
+	white-space: nowrap;
+	color: #CF374C;
+}
+
+
+/*内容*/
+
+#contenBox {
+	height: 500px;
+	padding-top: 150px;
+	
+	background: url(../img/bg.jpg) no-repeat;
+	background-size: 100% 100%;
 }
