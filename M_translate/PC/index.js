@@ -25,12 +25,9 @@ function lidata(obj, oNum) {
 }
 lidata(box1, 0);
 lidata(box2, 1);
-
-
 var oNum = 0;
-var ss=window||document;
-ss.onclick = function() {
-	alert(2)
+
+$(document).on('click',function(){
 	if(oNum === 2) {
 		oNum = 0;
 	} else {
@@ -41,8 +38,7 @@ ss.onclick = function() {
 		lidata(box1, oNum);
 		box.style.top='0px';
 	});
-
-}
+})
 
 function move(obj, attr, target, duration, callback) {
 	var b = parseFloat(getComputedStyle(obj)[attr]); //b :初始位置
