@@ -30,7 +30,7 @@ lidata(box2, 1);
 var oNum = 0;
 var ss=window||document;
 ss.onclick = function() {
-	
+	alert(2)
 	if(oNum === 2) {
 		oNum = 0;
 	} else {
