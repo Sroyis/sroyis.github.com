@@ -24,10 +24,10 @@ function lidata(obj, oNum) {
 	as[2].innerHTML = data[oNum].newPrices;
 }
 lidata(box1, 0);
-lidata(box2, 1);
+//lidata(box2, 1);
 var oNum = 0;
 
-$(document).on('click',function(){
+$(document).on('click', function() {
 	if(oNum === 2) {
 		oNum = 0;
 	} else {
@@ -36,8 +36,11 @@ $(document).on('click',function(){
 	lidata(box2, oNum);
 	move(box, 'top', -40, 500, function() {
 		lidata(box1, oNum);
-		box.style.top='0px';
-	});
+		box.style.top = '0px';
+	})
+})
+$(document).ready(function () {
+//	alert(2)
 })
 
 function move(obj, attr, target, duration, callback) {
