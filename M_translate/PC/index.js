@@ -28,20 +28,30 @@ lidata(box1, 0);
 var oNum = 0;
 
 $(document).on('click', function() {
+	
+})
+$(document).ready(function () {
+//	alert(2)
+})
+setTimeout(function(){
+	changMove();
+},800)
+setInterval(function(){
+	changMove()
+},2500)
+function changMove(){
 	if(oNum === 2) {
 		oNum = 0;
 	} else {
 		oNum++;
 	}
 	lidata(box2, oNum);
-	move(box, 'top', -40, 500, function() {
+	move(box, 'top', -40, 800, function() {
 		lidata(box1, oNum);
 		box.style.top = '0px';
 	})
-})
-$(document).ready(function () {
-//	alert(2)
-})
+}
+
 
 function move(obj, attr, target, duration, callback) {
 	var b = parseFloat(getComputedStyle(obj)[attr]); //b :初始位置
