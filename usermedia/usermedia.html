@@ -8,7 +8,7 @@
 	<body>
 		<button type="button" class="open">开启摄像头</button>
 		<!--video用于显示媒体设备的视频流，自动播放-->
-		<video id="video" poster='./img/bb.jpg' width="320px" height="480px" ></video>
+		<video id="video" poster='./img/bb.jpg' width="320px"></video>
 		<!--拍照按钮-->
 		<div>
 			<button id="capture">拍照</button>
@@ -23,7 +23,11 @@
 				if (navigator.mediaDevices.getUserMedia || navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia){
 					//调用用户媒体设备，访问摄像头
 					getUserMedia({
-						video:{width:320,height:480}
+						 video: {
+							 facingMode: "user"
+							 width: { min: 1024, ideal: 1280, max: 1920 },
+							 height: { min: 776, ideal: 720, max: 1080 }
+							}
 					},success,error);
 				} else {
 					alert("你的浏览器不支持访问用户媒体设备");
@@ -75,6 +79,7 @@
 			document.getElementById("capture").addEventListener("click",function(){
 				//绘制画面
 				context.drawImage(video,0,0,320,480);
+				width: 1280, height: 720
 			});
 		</script>
 	</body>
