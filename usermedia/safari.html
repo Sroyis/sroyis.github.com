@@ -5,9 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>摄像头拍照</title>
+  <style>
+    video::-webkit-media-controls-fullscreen-button {
+        display: none;
+    }
+    video::-webkit-media-controls-play-button {
+        display: none;}
+    video::-webkit-media-controls-timeline {
+        display: none;}
+    video::-webkit-media-controls-current-time-display{
+        display: none;}
+    video::-webkit-media-controls-time-remaining-display {
+        display: none;}
+    video::-webkit-media-controls-mute-button {
+        display: none;}
+    video::-webkit-media-controls-toggle-closed-captions-button {
+        display: none;}
+    video::-webkit-media-controls-volume-slider {
+        display: none;}
+  </style>
 </head>
 <body>
-  <video id="video" width="480" height="320" autoplay x-webkit-airplay="true" x5-playsinline="true" webkit-playsinline="true" playsinline="true">
+  <video id="video" width="480" height="320" controls = "false"
+ autoplay x-webkit-airplay="true" x5-playsinline="true" webkit-playsinline="true" playsinline="true">
   </video>
   <div>
     <button id="capture">拍照</button>
