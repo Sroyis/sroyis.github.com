@@ -36,11 +36,10 @@
   <script>
     //访问用户媒体设备的兼容方法
     function getUserMedia(constraints, success, error) {
-      alert(navigator.mediaDevices.getUserMedia)
       if (navigator.mediaDevices.getUserMedia) {
-        alert(1)
         //最新的标准API
         navigator.mediaDevices.getUserMedia(constraints).then(success).catch(error);
+        alert(12)
       } else if (navigator.webkitGetUserMedia) {
         alert(2)
         //webkit核心浏览器
@@ -72,6 +71,7 @@
     }
 
     function error(error) {
+      alert(`访问用户媒体设备失败${error.name}, ${error.message}`)
       console.log(`访问用户媒体设备失败${error.name}, ${error.message}`);
     }
 
