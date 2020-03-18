@@ -36,6 +36,7 @@
   <script>
     //访问用户媒体设备的兼容方法
     function getUserMedia(constraints, success, error) {
+      alert(navigator.mediaDevices.getUserMedia)
       if (navigator.mediaDevices.getUserMedia) {
         alert(1)
         //最新的标准API
